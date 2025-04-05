@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga & Sahila Wedding</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Redressed&family=Rock+Salt&family=Sail&family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- SimplyCountdown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css" />
+    <script src="countdown/simplyCountdown.min.js"></script>
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Fire Base-->
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section id="hero" class="hero d-flex align-items-end" style="height: 100vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="text-center mb-5">
+                    <h4>THE WEDDING OF</h4>
+                    <h1>Yoga & Sahila</h1>
+                    <h4>Kamis, 22 Oktober 2022</h4>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qs" class="ayat align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-5 text-center">
+                    <p>
+                        Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+
+                        menciptakan pasangan-pasangan untukmu dari jenismu
+
+                        sendiri, agar kamu cenderung dan merasa tenteram
+
+                        kepadanya, dan Dia menjadikan di antaramu rasa kasih dan
+
+                        sayang. Sungguh, pada yang demikian itu benar-benar
+
+                        terdapat tanda-tanda (kebesaran Allah)
+
+                        bagi kaum yang berpikir.
+                    </p><br>
+                    <p class="piece">AR-RUM AYAT 21</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="countdown">
+        <div class="container-fluid">
+            <div class="d-flex flex-column justify-content-center align-items-center text-black">
+                <div class="simply-countdown mb-3 mt-4"></div>
+                <button class="calendar btn btn-primary">Add to Calendar</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="couple">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7 text-center">
+                    <p class="initial">YS</p>
+                </div>
+                <div class="wc col-md-5 text-center">
+                    <p class="title">WEDDING CEREMONY</p>
+                    <hr>
+                    <p class="greet">Assalamualaikum Wr. Wb</p>
+                    <p>By the grace of God, we are pleased
+                        to announce our wedding to you,
+                        our family and friends:</p>
+                </div>
+            </div>
+            <div class="container m-3">
+                <div class="bride row justify-content-between align-items-center text-center">
+                    <div class="col-lg-5">
+                        <div class="mb-3">
+                            <img src="img/Yoga.jpg" alt="Yoga Mansur Yanto" class="img-responsive rounded-circle">
+                        </div>
+                        <h1>Yoga</h1>
+                        <h3>Yoga Mansur Yanto</h3>
+                        <p class="born">Putra Pertama Dari</p>
+                        <p class="address">Bpk. Subroto & Ibu Maryati</p>
+                        <button class="btn btn-instagram d-flex align-items-center gap-2 mx-auto">
+                            <i class="bi bi-instagram"></i> <span>yogaman</span>
+                        </button>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="mb-3">
+                            <img src="img/Sahila.jpg" alt="Sahila Putri Wardani" class="img-responsive rounded-circle">
+                        </div>
+                        <h1>Sahila</h1>
+                        <h3>Sahila Putri Wardani</h3>
+                        <p class="born">Putri Pertama Dari</p>
+                        <p class="address">Bpk. Suparman & Ibu Sumini</p>
+                        <button class="btn btn-instagram d-flex align-items-center gap-2 mx-auto">
+                            <i class="bi bi-instagram"></i> <span>sahilaa</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery text-center py-4">
+        <div class="container">
+            <h2 class="gallery-title mb-3">GALLERY</h2>
+            <div class="gallery-container" id="gallery">
+                <div class="gallery-item">
+                    <img src="img/1.jpg" alt="Gallery Image 1" class="img-fluid rounded">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/2.jpg" alt="Gallery Image 2" class="img-fluid rounded">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/5.jpg" alt="Gallery Image 3" class="img-fluid rounded">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/7.jpg" alt="Gallery Image 4" class="img-fluid rounded">
+                </div>
+                <div class="gallery-item">
+                    <img src="img/1.jpg" alt="Gallery Image 5" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="save-date">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="save-title">SAVE <br> THE <br> DATE</h2>
+                    <p class="save-subtitle">
+                        By the mercy and blessing of Allah SWT, <br>
+                        we intend to hold the wedding of our children
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center event-container">
+                <div class="col-md-6 event">
+                    <h3>Akad Nikah</h3>
+                    <span class="date">27</span>
+                    <p>JUMAT, DESEMBER 2024</p>
+                    <span class="time"><i>Time : 09:00 WIB</i></span><br>
+                    <span class="home">Kantor KUA Kecamatan Kaliwungu<br> Kabupaten Kendal</span><br>
+                    <button class="view-maps">VIEW MAPS</button>
+                </div>
+                <div class="col-md-6 event">
+                    <h3>Resepsi</h3>
+                    <span class="date">28</span>
+                    <p>SABTU, DESEMBER 2024</p>
+                    <span class="time"><i>Time : 13:00 WIB sd selesai</i></span><br>
+                    <span class="home">Rumah mempelai wanita </span><br>
+                    <div class="address">
+                        <small>(Sarimanan Tengah RT3 RW4 Kutoharjo Kaliwungu Kendal)</small>
+                    </div><br>
+                    <button class="view-maps">VIEW MAPS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rsvp container">
+        <div class="row">
+            <!-- Reservation -->
+            <div class="col-md-6">
+                <div class="rsvp-box p-3">
+                    <h3 class="rsvp-title mt-4 text-center">RESERVATION</h3>
+                    <p class="rsvp-subtitle text-center">Please confirm your attendance</p>
+                    <div class="form-input-rsvp">
+                        <div class="form-group">
+                            <input type="text" id="name" class="form-control" name="name" placeholder="Nama" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="pax" class="form-control" name="name" placeholder="1-5 Pax" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm">Konfirmasi</label><br>
+                            <input type="radio" id="confirm_yes" name="confirm" value="yes"> Iya, Saya akan hadir <br>
+                            <input type="radio" id="confirm_no" name="confirm" value="no"> Maaf, Saya tidak bisa hadir
+                        </div>
+                        <div class="button-group">
+                            <button type="submit" onclick="sendToWhatsApp()">Reservasi Via Whatsapp</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rsvp-box mt-4 mb-4 p-3">
+                    <h3 class="rsvp-title text-center">WEDDING CARD</h3>
+                    <p class="rsvp-subtitle-card text-center">
+                        Your blessing and coming to our wedding are enough for us. However, if you want
+                        to give a gift, we provide a Digital Envelope to make it easier for you. Thank you.
+                    </p>
+
+                    <div class="dropdown-list">
+                        <!-- Bank 1 -->
+                        <div class="mb-3">
+                            <button class="card btn btn-light w-100 text-start" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseBank1">
+                                Bank 1
+                            </button>
+                            <div class="card-collapse collapse mt-2" id="collapseBank1">
+                                <div class="border rounded p-2">
+                                    <p class="fw-bold mb-1">7960569541 a/n Maulana Malik Ibrahim</p>
+                                    <button class="btn btn-sm btn-outline-primary"
+                                        onclick="copyToClipboard('7960569541')">Salin</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bank 2 -->
+                        <div class="mb-1">
+                            <button class="card btn btn-light w-100 text-start" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseBank2">
+                                Bank 2
+                            </button>
+                            <div class="card-collapse collapse mt-2" id="collapseBank2">
+                                <div class="border rounded p-2">
+                                    <p class="fw-bold mb-1">3407 0106 8949 538 a/n Dian Nikmatul Maula</p>
+                                    <button class="btn btn-sm btn-outline-primary"
+                                        onclick="copyToClipboard('340701068949538')">Salin</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Feedback Copy -->
+                        <div id="copy-message" class="copy-message text-center mt-2" style="display: none;">
+                            Copied to clipboard!
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wedding Wish -->
+            <div class="col-md-6">
+                <div class="rsvp-box p-3">
+                    <h3 class="rsvp-title mt-4 text-center">WEDDING WISH</h3>
+                    <p class="rsvp-subtitle text-center">Kirimkan do'a & Ucapan kepada mempelai</p>
+                    <div class="wrapper-wish">
+                        <div class="form-input-wish" id="form-input-wish">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="inputName" placeholder="Nama" required />
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" id="inputWish" placeholder="Pesan" required></textarea>
+                            </div>
+                            <div class="button-group">
+                                <button type="button" id="submitWish">Kirim Ucapan</button>
+                            </div>
+                        </div>
+
+                        <!-- Container untuk menampilkan ucapan -->
+                        <div id="wishList" class="mt-3">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="footer py-4">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h3 class="mb-0">MENDING</h3>
+                    <h3 class="mb-3">WEDDING</h3>
+                </div>
+                <div class="col-12">
+                    <a href="https://www.instagram.com/syaekh_m" target="_blank" class="btn btn-dark me-2">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/6289613910986" target="_blank" class="btn btn-dark">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+    <script>
+        simplyCountdown(".simply-countdown", {
+            year: 2024, // required
+            month: 12, // required
+            day: 28, // required
+            hours: 7, // Default is 0 [0-23] integer
+            minutes: 0, // Default is 0 [0-59] integer
+            seconds: 0, // Default is 0 [0-59] integer
+            words: {
+                //words displayed into the countdown
+                days: { singular: "D", plural: "D" },
+                hours: { singular: "H", plural: "H" },
+                minutes: { singular: "M", plural: "M" },
+                seconds: { singular: "S", plural: "S" },
+            },
+        });
+    </script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD_r2bd47THwp6fR9DHOuCYj5RsXs06-8o",
+            authDomain: "wedding-invitation-bdbbe.firebaseapp.com",
+            databaseURL: "https://wedding-invitation-bdbbe-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "wedding-invitation-bdbbe",
+            storageBucket: "wedding-invitation-bdbbe.firebasestorage.app",
+            messagingSenderId: "1043559927157",
+            appId: "1:1043559927157:web:28c58dc6d5ad21f238573c",
+            measurementId: "G-Z563B0LJ5N"
+        };
+
+        // Inisialisasi Firebase
+        firebase.initializeApp(firebaseConfig);
+        const database = firebase.database();
+    </script>
+
+    <script type="module" src="script/firebase.js"></script>
+
+    <script src="/script/script.js"></script>
+</body>
+
+
+</html>
