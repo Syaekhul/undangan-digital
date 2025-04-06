@@ -30,7 +30,17 @@
 </head>
 
 <body>
-    <section id="hero" class="hero d-flex align-items-end" style="height: 100vh;">
+    <section id="cover"
+        class="cover w-100 h-100 p-3 mx-auto text-center d-flex justify-content-center align-items-center">
+        <main>
+            <h1>YS</h1>
+            <h4>DEAR</h4>
+            <h4><span id="guest-name">Guest</span></h4>
+            <a href="#hero" class="btn btn-lg" onClick="enableScroll()">Lihat Undangan</a>
+        </main>
+    </section>
+
+    <section id="hero" class="hero d-flex align-items-end">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="text-center mb-5">
@@ -198,8 +208,10 @@
                         </div>
                         <div class="form-group">
                             <label for="confirm">Konfirmasi</label><br>
-                            <input type="radio" id="confirm_yes" name="confirm" value="yes"> Iya, Saya akan hadir <br>
-                            <input type="radio" id="confirm_no" name="confirm" value="no"> Maaf, Saya tidak bisa hadir
+                            <input type="radio" id="confirm_yes" name="confirm" value="yes"> Iya, Saya akan
+                            hadir <br>
+                            <input type="radio" id="confirm_no" name="confirm" value="no"> Maaf, Saya tidak bisa
+                            hadir
                         </div>
                         <div class="button-group">
                             <button type="submit" onclick="sendToWhatsApp()">Reservasi Via Whatsapp</button>
@@ -301,6 +313,74 @@
         </div>
     </section>
 
+    <div id="audio-container">
+        <audio id="song" autoplay loop>
+            <source src="audio/Beautiful In White.mp3" type="audio/mp3">
+        </audio>
+        <div class="audio-icon-wrapper" style="display: none;">
+            <i class="bi bi-disc"></i>
+        </div>
+    </div>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const guestName = urlParams.get("to");
+        const guestNameEl = document.getElementById("guest-name");
+
+        if (guestName && guestNameEl) {
+            guestNameEl.innerText = decodeURIComponent(guestName);
+        }
+
+        const rootElement = document.querySelector(":root");
+        const audioIconWrapper = document.querySelector('.audio-icon-wrapper');
+        const audioIcon = document.querySelector('.audio-icon-wrapper i');
+        const song = document.querySelector('#song');
+        let isPlaying = false;
+
+        function disableScroll() {
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
+
+            window.onscroll = function () {
+                window.scrollTo(scrollTop, scrollLeft);
+            }
+
+            rootElement.style.scrollBehavior = 'auto';
+        }
+
+        function enableScroll() {
+            window.onscroll = function () { }
+            rootElement.style.scrollBehavior = 'smooth';
+            // Sembunyikan cover
+            const cover = document.getElementById("cover");
+            if (cover) {
+                cover.style.display = "none";
+            }
+            playAudio();
+        }
+
+        function playAudio() {
+            song.vol = 0.1;
+            audioIconWrapper.style.display = 'flex';
+            song.play();
+            isPlaying = true;
+        }
+
+        audioIconWrapper.onclick = function () {
+            if (isPlaying) {
+                song.pause();
+                audioIcon.classList.remove('bi-disc');
+                audioIcon.classList.add('bi-pause-circle');
+            } else {
+                song.play();
+                audioIcon.classList.add('bi-disc');
+                audioIcon.classList.remove('bi-pause-circle');
+            }
+            isPlaying = !isPlaying;
+        }
+
+        disableScroll();
+    </script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -351,6 +431,5 @@
 
     <script src="/script/script.js"></script>
 </body>
-
 
 </html>

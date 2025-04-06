@@ -8,6 +8,15 @@ body {
   font-family: serif;
 }
 
+.page-transition {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide-up #cover {
+  transform: translateY(-100%);
+}
+
 .cover::before {
   content: "";
   position: absolute;
@@ -29,6 +38,7 @@ body {
 .cover {
   position: relative;
   min-height: 100vh;
+  transition: transform 1.3s ease;
 }
 
 .cover h1 {
@@ -68,6 +78,7 @@ body {
 
 .hero {
   position: relative;
+  height: 100vh;
   background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 50%,
@@ -474,12 +485,53 @@ body {
   color: var(--black);
 }
 
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  cursor: pointer;
+  right: 2rem;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  line-height: 0;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .footer {
   margin-top: 3rem;
   font-family: "Rock Salt", serif;
 }
 
 @media (max-width: 768px) {
+  .cover h4 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .cover a {
+    margin-top: 20px;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
   .hero h4 {
     font-size: 32px;
   }
@@ -555,9 +607,17 @@ body {
   .rsvp .rsvp-box .rsvp-subtitle-card {
     font-size: 14px;
   }
+
+  .rsvp .rsvp-box .form-input-wish {
+    padding-right: 8px;
+  }
 }
 
 @media (max-width: 426px) {
+  .hero {
+    height: 80vh;
+  }
+
   .hero h4 {
     font-size: 24px;
   }
@@ -627,6 +687,126 @@ body {
   .save-date .event-container {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .save-date .event-container .home {
+    font-size: 1.2rem;
+  }
+
+  .save-date .event-container .time {
+    font-size: 1.1rem;
+  }
+
+  .save-date .event .address {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+  }
+
+  .rsvp .rsvp-box .rsvp-subtitle-card {
+    font-size: 14px;
+  }
+
+  .rsvp .rsvp-container .row .col-md-6 {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .cover h1 {
+    font-size: 96px;
+  }
+  .cover h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .cover a {
+    margin-top: 20px;
+  }
+
+  .hero h4 {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .ayat p {
+    font-size: 12px;
+  }
+
+  .ayat p.piece {
+    font-size: 30px;
+  }
+
+  .couple .row {
+    flex-wrap: nowrap;
+  }
+
+  .couple .col-sm-7 {
+    width: 13%;
+  }
+
+  .couple .initial {
+    display: none;
+  }
+
+  .couple .wc p {
+    font-size: 18px;
+  }
+
+  .couple .container.m-3 {
+    margin: 0 !important;
+  }
+
+  .couple .container h1 {
+    font-size: 36px;
+  }
+
+  .couple .container h3 {
+    font-size: 24px;
+  }
+
+  .couple .container .bride img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .couple .container .born,
+  .couple .container .address {
+    font-size: 16px;
+  }
+
+  .couple .container .bride {
+    flex-wrap: wrap;
+  }
+
+  .gallery .gallery-title {
+    font-size: 3rem;
+  }
+
+  .gallery {
+    height: 100%;
+  }
+
+  .save-date .event-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .save-date .event-container .event {
+    margin-bottom: 20px;
+  }
+
+  .save-date .event-container p {
+    font-size: 1.3rem;
   }
 
   .save-date .event-container .home {

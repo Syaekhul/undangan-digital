@@ -39,14 +39,14 @@ function sendToWhatsApp() {
 
   const confirmation = confirm.value;
 
-  let message = `Hallo, saya ingin mengkonfirmasi kehadiran:\n\nNama: ${name},`;
+  let message = `Hallo, saya ingin mengkonfirmasi kehadiran:\n\nNama: ${name}`;
 
   if (confirmation === "yes") {
     if (!pax) {
       alert("Mohon isi jumlah orang jika Anda akan hadir.");
       return;
     }
-    message += `\nKonfirmasi: Iya, Saya akan hadir,\nJumlah Pax: ${pax}.`;
+    message += `\nKonfirmasi: Iya, Saya akan hadir\nJumlah Pax: ${pax}.`;
   } else {
     message += `\nKonfirmasi: Tidak, Saya tidak akan hadir.`;
   }

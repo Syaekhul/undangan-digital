@@ -50,3 +50,14 @@
     font-size: 36px;
   }
 }
+
+@media (max-width: 320px) {
+  .simply-countdown {
+    gap: 20px;
+  }
+
+  .simply-countdown > .simply-section .simply-amount,
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 32px;
+  }
+}
