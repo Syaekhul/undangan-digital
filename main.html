@@ -112,9 +112,10 @@
                         <h3>Yoga Mansur Yanto</h3>
                         <p class="born">Putra Dari</p>
                         <p class="address">Bpk. Subroto & Ibu Maryati</p>
-                        <button class="btn btn-instagram d-flex align-items-center gap-2 mx-auto">
-                            <i class="bi bi-instagram"></i> <span>yogaman</span>
-                        </button>
+                        <a href="https://www.instagram.com/yogamanto"
+                            class="btn btn-instagram align-items-center gap-2 mx-auto" target="_blank">
+                            <i class="bi bi-instagram"></i> <span>yogamanto</span>
+                        </a>
                     </div>
 
                     <div class="col-lg-5">
@@ -126,9 +127,10 @@
                         <h3>Sahila Ifadatin Ni'ami</h3>
                         <p class="born">Putri Dari</p>
                         <p class="address">Bpk. Aiptu Wijonarko & Ibu Lailiana Istiana</p>
-                        <button class="btn btn-instagram d-flex align-items-center gap-2 mx-auto">
-                            <i class="bi bi-instagram"></i> <span>sahilaa</span>
-                        </button>
+                        <a href="https://www.instagram.com/sahila_niami"
+                            class="btn btn-instagram align-items-center gap-2 mx-auto" target="_blank">
+                            <i class="bi bi-instagram"></i> <span>sahila_niami</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -241,9 +243,9 @@
                             </button>
                             <div class="card-collapse collapse mt-2" id="collapseBank1">
                                 <div class="border rounded p-2">
-                                    <p class="fw-bold mb-1">7960569541 a/n Maulana Malik Ibrahim</p>
+                                    <p class="fw-bold mb-1">123456789 a/n Yoga Mansur Yanto</p>
                                     <button class="btn btn-sm btn-outline-primary"
-                                        onclick="copyToClipboard('7960569541')">Salin</button>
+                                        onclick="copyToClipboard('123456789')">Salin</button>
                                 </div>
                             </div>
                         </div>
@@ -256,9 +258,9 @@
                             </button>
                             <div class="card-collapse collapse mt-2" id="collapseBank2">
                                 <div class="border rounded p-2">
-                                    <p class="fw-bold mb-1">3407 0106 8949 538 a/n Dian Nikmatul Maula</p>
+                                    <p class="fw-bold mb-1">123456789 a/n Sahila Ifadatin Ni'ami</p>
                                     <button class="btn btn-sm btn-outline-primary"
-                                        onclick="copyToClipboard('340701068949538')">Salin</button>
+                                        onclick="copyToClipboard('123456789')">Salin</button>
                                 </div>
                             </div>
                         </div>
@@ -413,6 +415,20 @@
                 minutes: { singular: "M", plural: "M" },
                 seconds: { singular: "S", plural: "S" },
             },
+        });
+    </script>
+
+    <script>
+        document.querySelector('.calendar').addEventListener('click', function () {
+            const title = 'Acara Pernikahan';
+            const description = 'Hari Pernikahan Yoga & Sahila'; //gant dengan nama mempelai
+            const location = 'Toko Naja, Kec. Godong, Kab. Grobogan'; //Ganti lokasi sesuai client
+            const startDate = '20241008T010000Z'; // format jam
+            const endDate = '20241008T030000Z'; //perkiraan selesai
+
+            const calendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${startDate}/${endDate}&details=${encodeURIComponent(description)}&location=${encodeURIComponent(location)}&sf=true&output=xml`;
+
+            window.open(calendarUrl, '_blank');
         });
     </script>
 
