@@ -716,6 +716,126 @@ body {
   }
 }
 
+@media (max-width: 376px) {
+  .cover h1 {
+    font-size: 96px;
+  }
+  .cover h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 28px;
+  }
+
+  .cover a {
+    margin-top: 20px;
+  }
+
+  .hero h4 {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .ayat p {
+    font-size: 12px;
+  }
+
+  .ayat p.piece {
+    font-size: 36px;
+  }
+
+  .couple .row {
+    flex-wrap: nowrap;
+  }
+
+  .couple .col-sm-7 {
+    width: 13%;
+  }
+
+  .couple .initial {
+    display: none;
+  }
+
+  .couple .wc p {
+    font-size: 18px;
+  }
+
+  .couple .container.m-3 {
+    margin: 0 !important;
+  }
+
+  .couple .container h1 {
+    font-size: 36px;
+  }
+
+  .couple .container h3 {
+    font-size: 24px;
+  }
+
+  .couple .container .bride img {
+    width: 85%;
+    height: 85%;
+  }
+
+  .couple .container .born,
+  .couple .container .address {
+    font-size: 16px;
+  }
+
+  .couple .container .bride {
+    flex-wrap: wrap;
+  }
+
+  .gallery .gallery-title {
+    font-size: 3rem;
+  }
+
+  .gallery {
+    height: 100%;
+  }
+
+  .save-date .event-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .save-date .event-container .event {
+    margin-bottom: 20px;
+  }
+
+  .save-date .event-container p {
+    font-size: 1.3rem;
+  }
+
+  .save-date .event-container .home {
+    font-size: 1.2rem;
+  }
+
+  .save-date .event-container .time {
+    font-size: 1.1rem;
+  }
+
+  .save-date .event .address {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    padding: 0 1rem;
+    font-size: 0.875rem;
+  }
+
+  .rsvp .rsvp-box .rsvp-subtitle-card {
+    font-size: 14px;
+  }
+
+  .rsvp .rsvp-container .row .col-md-6 {
+    margin-bottom: 10px;
+  }
+}
+
 @media (max-width: 320px) {
   .cover h1 {
     font-size: 96px;
@@ -781,7 +901,7 @@ body {
 
   .couple .container .born,
   .couple .container .address {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .couple .container .bride {

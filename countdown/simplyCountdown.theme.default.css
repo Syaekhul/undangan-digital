@@ -51,9 +51,20 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 376px) {
   .simply-countdown {
-    gap: 20px;
+    gap: 28px;
+  }
+
+  .simply-countdown > .simply-section .simply-amount,
+  .simply-countdown > .simply-section .simply-word {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 321px) {
+  .simply-countdown {
+    gap: 18px;
   }
 
   .simply-countdown > .simply-section .simply-amount,
