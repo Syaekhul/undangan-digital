@@ -4,6 +4,23 @@
   --white: #ffffff;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 body {
   font-family: serif;
 }
@@ -613,7 +630,7 @@ body {
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .hero {
     height: 80vh;
   }
@@ -635,7 +652,7 @@ body {
   }
 
   .ayat p.piece {
-    font-size: 40px;
+    font-size: 36px;
   }
 
   .couple .row {
@@ -659,7 +676,7 @@ body {
   }
 
   .couple .container h3 {
-    font-size: 32px;
+    font-size: 30px;
   }
 
   .couple .container .bride img {
@@ -743,7 +760,7 @@ body {
   }
 
   .ayat p.piece {
-    font-size: 36px;
+    font-size: 34px;
   }
 
   .couple .row {

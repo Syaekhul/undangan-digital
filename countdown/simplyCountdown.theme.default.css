@@ -40,9 +40,9 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 431px) {
   .simply-countdown {
-    gap: 50px;
+    gap: 38px;
   }
 
   .simply-countdown > .simply-section .simply-amount,

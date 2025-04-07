@@ -1,6 +1,6 @@
 const gallery = document.getElementById("gallery");
 let scrollAmount = 0;
-const scrollStep = 400;
+const scrollStep = 310;
 const delay = 2000;
 
 function autoScroll() {

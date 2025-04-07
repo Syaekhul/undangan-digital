@@ -53,7 +53,7 @@
         </div>
     </section>
 
-    <section id="qs" class="ayat align-items-center">
+    <section id="qs" class="ayat align-items-center reveal-left">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5 text-center">
@@ -160,7 +160,7 @@
         </div>
     </section>
 
-    <section class="save-date">
+    <section class="save-date reveal-left">
         <div class="container">
             <div class="row text-center">
                 <div class="col-12">
@@ -399,6 +399,27 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+    <script>
+        const revealElements = document.querySelectorAll(
+            '#hero, #qs, .countdown, .couple, .gallery, .save-date, .rsvp, .footer'
+        );
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, {
+            threshold: 0.2,
+        });
+
+        revealElements.forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
 
     <script>
         simplyCountdown(".simply-countdown", {
