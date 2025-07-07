@@ -11,7 +11,7 @@ Undangan Digital adalah website undangan pernikahan online yang responsif, inter
 - Desain responsif dengan animasi smooth.
 
 ## 🛠 Tech Stack
-- **Frontend**: HTML, CSS, JavaScript, Bootstrap, Swiper.js, AOS.
+- **Frontend**: HTML, CSS, JavaScript, Bootstrap.
 - **Backend**: Firebase Realtime Database.
 - **Hosting**: Vercel.
 
